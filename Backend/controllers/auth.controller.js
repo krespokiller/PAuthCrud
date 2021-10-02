@@ -36,6 +36,7 @@ const crearusuario = async(req,res = response)=>{
 			ok:true,
 			uid:dbUser.id,
 			name,
+			email,
 			token
 		});
 
@@ -52,14 +53,19 @@ const crearusuario = async(req,res = response)=>{
 // renovar contraseña
 const renovartoken = async(req,res = response)=>{
 
-	const {uid,name}=req;
+	const {uid}=req;
+	//leer base de datos
+	const dbUser=await Usuario.findById(uid);
+
+
 	//generar JWT
-	const token = await generarJWT(uid,name);
+	const token = await generarJWT(uid,dbUser.name);
 	res.json({
 		ok: true,
 		msg: 'renovar renovartoken al pelo',
 		uid,
-		name,
+		name: dbUser.name,
+		email:dbUser.email,
 		token
 	});
 };
@@ -93,6 +99,7 @@ const loginusuario = async(req,res= response)=>{
 			ok:true,
 			uid:dbUser.id,
 			name: dbUser.name,
+			email: dbUser.email,
 			token
 		});
 
