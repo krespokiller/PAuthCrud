@@ -3,11 +3,11 @@
   autocomplete="off"
   [formGroup]='formulario'
   (ngSubmit)="login()"> 
-    <p class="text-gray-700 text-sm font-bold mb-5">
+    <p class="text-gray-700 text-sm mb-5">
       Bienvenido!
     </p>
     <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2">
+      <label class="block text-gray-700 text-sm mb-2">
         Email
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -16,7 +16,7 @@
        placeholder="ejemplo@ejemplo.com">
     </div>
     <div class="mb-6">
-      <label class="block text-gray-700 text-sm font-bold mb-2">
+      <label class="block text-gray-700 text-sm mb-2">
         Password
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -26,13 +26,13 @@
       
     </div>
     <div class="flex items-center justify-between">
-      <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       type="submit"
       [disabled]="formulario.invalid">
         Ingresar
       </button>
       <a routerLink="../registro"
-        class="inline-block align-baseline font-bold text-sm text-indigo-500 hover:underline text-center">
+        class="inline-block align-baseline text-sm text-indigo-500 hover:underline text-center">
         Crear cuenta
       </a>
     </div>

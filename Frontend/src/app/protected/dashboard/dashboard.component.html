@@ -1,23 +1,25 @@
 
-<div class="background p-10">
-    <div class="flex justify-between bg-white bg-opacity-30 border border-white border-opacity-50 rounded-2xl p-3 shadow-2xl">
+<div class="background p-10 lg:grid lg:grid-cols-6 lg:gap-4">
+    <div class="flex justify-between bg-white bg-opacity-30 border border-white border-opacity-40 rounded-2xl p-3 shadow-2xl lg:flex-col lg:col-start-1 lg:col-end-3">
         <div>
             <h1>Dashboard</h1>
             <p>Aqui solo puede acceder un usuario</p>
         </div>
         <div class="">
-            <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
             (click)="Logout()">
             Logout
             </button>
         </div>
     </div>
-    <br>
-    <div class="bg-white bg-opacity-30 border border-white border-opacity-50 rounded-2xl p-3 shadow-2xl">
+    <br class="lg:hidden">
+    <div class="bg-white bg-opacity-30 border border-white border-opacity-40 rounded-2xl p-3 shadow-2xl lg:col-start-3 lg:col-end-7">
         <h4>Informacion usuario</h4>
         <hr>
         <br>
-        <pre>{{usuario|json}}</pre>
+        <p>Nombre: {{usuario.name}}</p>
+        <p>Email: {{usuario.email}}</p>
+        <p>Uid: {{usuario.uid}}</p>
     </div>
 </div>

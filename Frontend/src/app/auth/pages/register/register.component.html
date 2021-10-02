@@ -4,13 +4,13 @@ autocomplete="off"
 [formGroup]='formulario'
 (ngSubmit)="register()"
 > 
-    <p class="text-gray-700 text-sm font-bold mb-6">
+    <p class="text-gray-700 text-sm mb-6">
       Registrate
     </p>
 
     <div class="mb-4">
         <label 
-        class="block text-gray-700 text-sm font-bold mb-2">
+        class="block text-gray-700 text-sm mb-2">
           Nombre
         </label>
         <input 
@@ -22,7 +22,7 @@ autocomplete="off"
 
     <div class="mb-4">
       <label 
-      class="block text-gray-700 text-sm font-bold mb-2">
+      class="block text-gray-700 text-sm mb-2">
         Email
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -32,7 +32,7 @@ autocomplete="off"
     </div>
 
     <div class="mb-6">
-      <label class="block text-gray-700 text-sm font-bold mb-2">
+      <label class="block text-gray-700 text-sm mb-2">
         Password
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -43,7 +43,7 @@ autocomplete="off"
     
     <div class="flex items-center justify-between">
       <div class="p-1">
-        <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="submit"
       [disabled]="formulario.invalid">
         Ingresar
@@ -51,8 +51,8 @@ autocomplete="off"
       </div>
 
       <div class="p-1 grid grid-cols-1">
-        <p class="inline-block align-baseline font-bold text-sm text-indigo-500 mb-2 text-center">¿Ya tienes cuenta?</p>
-        <a class="inline-block align-baseline font-bold text-sm text-indigo-500 hover:underline text-center"
+        <p class="inline-block align-baseline text-sm text-indigo-500 mb-2 text-center">¿Ya tienes cuenta?</p>
+        <a class="inline-block align-baseline text-sm text-indigo-500 hover:underline text-center"
         routerLink="../login">
         Inicia sesion
         </a>
