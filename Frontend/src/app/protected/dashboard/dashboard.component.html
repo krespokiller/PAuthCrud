@@ -1,12 +1,23 @@
-<h1>Dashboard</h1>
-<hr>
-<p>
-    Aqui solo puede acceder un usuario
-</p>
 
-<h4>Informacion usuario</h4>
-<pre>{{usuario|json}}</pre>
-
-<button (click)="Logout()">
-    Logout
-</button>
+<div class="background p-10">
+    <div class="flex justify-between bg-white bg-opacity-30 border border-white border-opacity-50 rounded-2xl p-3 shadow-2xl">
+        <div>
+            <h1>Dashboard</h1>
+            <p>Aqui solo puede acceder un usuario</p>
+        </div>
+        <div class="">
+            <button class="bg-indigo-500 bg-gradient-to-r hover:from-indigo-500 hover:to-teal-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            (click)="Logout()">
+            Logout
+            </button>
+        </div>
+    </div>
+    <br>
+    <div class="bg-white bg-opacity-30 border border-white border-opacity-50 rounded-2xl p-3 shadow-2xl">
+        <h4>Informacion usuario</h4>
+        <hr>
+        <br>
+        <pre>{{usuario|json}}</pre>
+    </div>
+</div>

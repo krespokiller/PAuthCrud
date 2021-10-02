@@ -21,6 +21,6 @@ app.use(express.json());
 //routes
 app.use('/api/auth', require('./routes/auth'));
 
-app.listen(process.env.puerto, ()=>{
-	console.log(`Runing in ${process.env.puerto}`);
+app.listen(process.env.PORT || 4201, ()=>{
+	console.log(`Runing in ${process.env.PORT}`);
 });
